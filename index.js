@@ -14,17 +14,21 @@ const inputEl = document.getElementById("input-field")
 const shoppingListEl = document.getElementById("shopping-list")
 
 onValue(shoppingListInDB, function(snapshot) {
-    let shoppingListArray = Object.entries(snapshot.val())
+    if (snapshot.exists()) {
+        let shoppingListArray = Object.entries(snapshot.val())
 
-    clearShoppingListEl()
-
-    for (let i = 0; i < shoppingListArray.length; i++) {
-        let currentItem = shoppingListArray[i]
-
-        let currentItemId = currentItem[0]
-        let currentItemValue = currentItem[1]
-
-        addItemToShoppingListEl(currentItem)
+        clearShoppingListEl()
+    
+        for (let i = 0; i < shoppingListArray.length; i++) {
+            let currentItem = shoppingListArray[i]
+    
+            let currentItemId = currentItem[0]
+            let currentItemValue = currentItem[1]
+    
+            addItemToShoppingListEl(currentItem)
+        }
+    } else {
+        shoppingListEl.innerHTML = "No items here...yet"
     }
     
 })
