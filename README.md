@@ -1,6 +1,6 @@
 # Add To Cart
 
-A fun app that allows you to create a list! 
+A fun app that allows you to create a list!
 
 Tech stack: JavaScript, HTML, CSS, and Firebase
 
