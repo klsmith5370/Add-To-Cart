@@ -8,7 +8,7 @@ To get the icon: make use of favicon.io and click on png --> ico (https://favico
 
 Use of web manifests: (https://developer.mozilla.org/en-US/docs/Web/Manifest)
 
-Deployed link: 
+Deployed link: https://cat-cart.netlify.app/
 
 Quick start:
 
