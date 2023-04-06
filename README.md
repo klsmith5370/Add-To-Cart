@@ -1,8 +1,12 @@
-# Add-To-Cart
+# Cat Cart
 
-An app that allows you to create a shopping list and adding it to a cart!  
+A fun app that allows you to create a list! 
 
 Tech stack: JavaScript, HTML, CSS, and Firebase
+
+To get the icon: make use of favicon.io and click on png --> ico (https://favicon.io/)
+
+Use of web manifests - (https://developer.mozilla.org/en-US/docs/Web/Manifest)
 
 Quick start:
 

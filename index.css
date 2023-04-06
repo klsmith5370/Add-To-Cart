@@ -3,6 +3,8 @@ html, body {
     padding: 0;
     font-family: "Rubik", sans-serif;
     background-color: #EEF0F4;
+    color: #432000;
+    user-select: none;
 }
 
 .container { 
@@ -33,7 +35,12 @@ button {
     padding: 15px;
     font-size: 20px;
     text-align: center;
-    font-family: "Rubik", sans-serif; 
+    font-family: "Rubik", sans-serif;
+}
+
+button:hover {
+    background-color: #432000;
+    cursor: pointer;
 }
 
 img {
@@ -60,3 +67,7 @@ ul li {
     text-align: center;
 }
 
+ul li:hover {
+    background-color: #FFECC7;
+    cursor: pointer;
+}
