@@ -14,12 +14,16 @@ const inputEl = document.getElementById("input-field")
 const shoppingListEl = document.getElementById("shopping-list")
 
 onValue(shoppingListInDB, function(snapshot) {
-    let shoppingListArray = Object.values(snapshot.val())
+    let shoppingListArray = Object.entries(snapshot.val())
 
     clearShoppingListEl()
 
     for (let i = 0; i < shoppingListArray.length; i++) {
         let currentItem = shoppingListArray[i]
+
+        let currentItemId = currentItem[0]
+        let currentItemValue = currentItem[1]
+
         addItemToShoppingListEl(currentItem)
     }
     
@@ -33,8 +37,15 @@ function clearInputFieldEl() {
     inputEl.value = ""
 }
 
-function addItemToShoppingListEl(itemValue) {
-    shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+function addItemToShoppingListEl(item) {
+    let itemId = item[0]
+    let itemValue = item[1]
+
+    let newEl = document.createElement("li")
+
+    newEl.textContent = itemValue
+
+    shoppingListEl.append(newEl)
 }
 
 addButtonEl.addEventListener("click", () => {
